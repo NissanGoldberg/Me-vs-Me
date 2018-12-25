@@ -80,7 +80,7 @@ public class QuestionsActivity extends AppCompatActivity {
                         TextView question_level_tv = view.findViewById(R.id.question_level);
 
                         if (permissions.equals("true")) {
-                            question_details_tv.setText(ds.getValue().toString());
+                            question_level_tv.setText(ds.getValue().toString());
                         } else {
                             question_level_tv.setText("");
                         }
