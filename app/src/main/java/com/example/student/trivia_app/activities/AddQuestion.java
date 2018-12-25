@@ -68,6 +68,7 @@ public class AddQuestion extends AppCompatActivity {
             last_question_id = intent.getStringExtra("new_question_id");
         }
         else{// The admin wants to edit old question
+
             last_question_id = intent.getStringExtra("old_question_id");
             DatabaseReference db_question = mDatabase.getReference("/questions/" + last_question_id);
 
@@ -112,6 +113,9 @@ public class AddQuestion extends AppCompatActivity {
             childUpdates.put("level", level_txt.getText().toString());
 
             db_question.updateChildren(childUpdates);
+            
+            startActivity(new Intent(AddQuestion.this, CategoriesActivity.class)
+                    .putExtra("permissions","true"));
         }
     }
 
