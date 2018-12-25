@@ -75,6 +75,7 @@ public class AddQuestion extends AppCompatActivity {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     questionProperties[0] = new Question(dataSnapshot.getValue(Question.class));
+
                     question_txt.setText(questionProperties[0].getQuestion());
                     answer_1_txt.setText(questionProperties[0].getAnswer1());
                     answer_2_txt.setText(questionProperties[0].getAnswer2());
@@ -111,6 +112,8 @@ public class AddQuestion extends AppCompatActivity {
             childUpdates.put("level", level_txt.getText().toString());
 
             db_question.updateChildren(childUpdates);
+            startActivity(new Intent(AddQuestion.this, CategoriesActivity.class));
+
         }
     }
 
