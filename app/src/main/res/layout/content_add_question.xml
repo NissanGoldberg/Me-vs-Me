@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.student.trivia_app.activities.AddQuestion"
+    tools:showIn="@layout/activity_add_question">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="508dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="59dp">
+
+        <EditText
+            android:id="@+id/question_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Question"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/answer_1_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Answer 1"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/answer_2_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Answer 2"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/answer_3_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Answer 3"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/answer_4_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Answer 4"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/level_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Level"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/correct_answer_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Correct Answer"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/submit_question_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="add_question"
+            android:text="Submit Question" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

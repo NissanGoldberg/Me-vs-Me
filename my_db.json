@@ -1,0 +1,267 @@
+{
+  "questions" : [ null, null, null, null, null, null, null, null, null, null, null, {
+    "answer1" : "2",
+    "answer2" : "3",
+    "answer3" : "3",
+    "answer4" : "-12",
+    "level" : "1",
+    "question" : "i=3;++i;",
+    "rightAnswer" : "3"
+  }, {
+    "answer1" : "*",
+    "answer2" : "#",
+    "answer3" : "-",
+    "answer4" : "^",
+    "level" : "1",
+    "question" : "What is the symbol of pointer?",
+    "rightAnswer" : "*"
+  }, {
+    "answer1" : "int __a3;",
+    "answer2" : "int __3a;",
+    "answer3" : "int __A3;",
+    "answer4" : "None of the mentioned",
+    "level" : "2",
+    "question" : "Which of the following is not a valid variable name declaration?",
+    "rightAnswer" : "None of the mentioned"
+  }, {
+    "answer1" : "31",
+    "answer2" : "6",
+    "answer3" : "12",
+    "answer4" : "14",
+    "level" : "3",
+    "question" : "C99 standard guarantees uniqueness of _____ characters for external names.",
+    "rightAnswer" : "31"
+  }, null, null, null, null, null, null, {
+    "answer1" : "LowerCase letters",
+    "answer2" : "UpperCase letters",
+    "answer3" : "CamelCase letters",
+    "answer4" : "None of the mentioned",
+    "level" : "1",
+    "question" : "All keywords in C are in ___",
+    "rightAnswer" : "LowerCase letters"
+  }, {
+    "answer1" : "2",
+    "answer2" : "3",
+    "answer3" : "98",
+    "answer4" : "-12",
+    "level" : "2",
+    "question" : "i=3;++i;",
+    "rightAnswer" : "3"
+  }, {
+    "answer1" : "2",
+    "answer2" : "3",
+    "answer3" : "98",
+    "answer4" : "-12",
+    "level" : "1",
+    "question" : "i=3;++i;",
+    "rightAnswer" : "3"
+  }, {
+    "answer1" : "2",
+    "answer2" : "3",
+    "answer3" : "98",
+    "answer4" : "-12",
+    "level" : "3",
+    "question" : "i=3;++i;",
+    "rightAnswer" : "3"
+  }, {
+    "answer1" : "2",
+    "answer2" : "3",
+    "answer3" : "98",
+    "answer4" : "-12",
+    "level" : "1",
+    "question" : "i=3;++i;",
+    "rightAnswer" : "3"
+  }, {
+    "answer1" : "2",
+    "answer2" : "3",
+    "answer3" : "98",
+    "answer4" : "-12",
+    "level" : "1",
+    "question" : "i=3;++i;",
+    "rightAnswer" : "3"
+  }, {
+    "answer1" : "2",
+    "answer2" : "3",
+    "answer3" : "98",
+    "answer4" : "-12",
+    "level" : "2",
+    "question" : "i=3;++i;",
+    "rightAnswer" : "3"
+  }, {
+    "answer1" : "2",
+    "answer2" : "3",
+    "answer3" : "98",
+    "answer4" : "-12",
+    "level" : "1",
+    "question" : "i=3;++i;",
+    "rightAnswer" : "3"
+  }, null, null, {
+    "answer1" : "2",
+    "answer2" : "3",
+    "answer3" : "98",
+    "answer4" : "-12",
+    "level" : "3",
+    "question" : "i=3;++i;",
+    "rightAnswer" : "3"
+  }, {
+    "answer1" : "2",
+    "answer2" : "3",
+    "answer3" : "98",
+    "answer4" : "-12",
+    "level" : "2",
+    "question" : "i=3;++i;",
+    "rightAnswer" : "3"
+  }, {
+    "answer1" : "2",
+    "answer2" : "3",
+    "answer3" : "98",
+    "answer4" : "-12",
+    "level" : "1",
+    "question" : "i=3;++i;",
+    "rightAnswer" : "3"
+  }, {
+    "answer1" : "2",
+    "answer2" : "3",
+    "answer3" : "98",
+    "answer4" : "-12",
+    "level" : "2",
+    "question" : "i=3;++i;",
+    "rightAnswer" : "3"
+  }, {
+    "answer1" : "2",
+    "answer2" : "3",
+    "answer3" : "98",
+    "answer4" : "-12",
+    "level" : "1",
+    "question" : "i=3;++i;",
+    "rightAnswer" : "3"
+  }, {
+    "answer1" : "2",
+    "answer2" : "3",
+    "answer3" : "98",
+    "answer4" : "-12",
+    "level" : "1",
+    "question" : "i=3;++i;",
+    "rightAnswer" : "3"
+  }, {
+    "answer1" : "2",
+    "answer2" : "3",
+    "answer3" : "98",
+    "answer4" : "-12",
+    "level" : "1",
+    "question" : "i=3;++i;",
+    "rightAnswer" : "3"
+  }, null, null, null, {
+    "answer1" : "2",
+    "answer2" : "3",
+    "answer3" : "98",
+    "answer4" : "-12",
+    "level" : "3",
+    "question" : "i=3;++i;",
+    "rightAnswer" : "3"
+  }, {
+    "answer1" : "2",
+    "answer2" : "3",
+    "answer3" : "98",
+    "answer4" : "-12",
+    "level" : "2",
+    "question" : "i=3;++i;",
+    "rightAnswer" : "3"
+  }, {
+    "answer1" : "2",
+    "answer2" : "3",
+    "answer3" : "98",
+    "answer4" : "-12",
+    "level" : "1",
+    "question" : "i=3;++i;",
+    "rightAnswer" : "3"
+  }, {
+    "answer1" : "2",
+    "answer2" : "3",
+    "answer3" : "98",
+    "answer4" : "-12",
+    "level" : "1",
+    "question" : "i=3;++i;",
+    "rightAnswer" : "3"
+  }, {
+    "answer1" : "2",
+    "answer2" : "3",
+    "answer3" : "98",
+    "answer4" : "-12",
+    "level" : "1",
+    "question" : "i=3;++i;",
+    "rightAnswer" : "3"
+  } ],
+  "subjects" : {
+    "C" : {
+      "bgColor" : "#3381CC",
+      "iconResource" : "R.mipmap.cpp_cat_layer",
+      "name" : "C",
+      "questions" : {
+        "11" : "i=3;++i;",
+        "12" : "i=3;++i;",
+        "13" : "i=3;++i;",
+        "14" : "i=3;++i;"
+      }
+    },
+    "CPP" : {
+      "bgColor" : "#3381CC",
+      "iconResource" : "R.mipmap.cpp_cat_layer",
+      "name" : "CPP",
+      "questions" : {
+        "21" : "i=3;++i;",
+        "22" : "What is the symbol of pointer?",
+        "23" : "i=3;++i;",
+        "24" : "i=3;++i;",
+        "25" : "i=3;++i;",
+        "26" : "i=3;++i;",
+        "27" : "i=3;++i;",
+        "28" : "i=3;++i;"
+      }
+    },
+    "Java" : {
+      "bgColor" : "#3381CC",
+      "iconResource" : "R.mipmap.cpp_cat_layer",
+      "name" : "Java",
+      "questions" : {
+        "31" : "i=3;++i;",
+        "32" : "i=3;++i;",
+        "33" : "i=3;++i;",
+        "34" : "i=3;++i;",
+        "35" : "i=3;++i;",
+        "36" : "i=3;++i;",
+        "37" : 1
+      }
+    },
+    "Python" : {
+      "bgColor" : "#3381CC",
+      "iconResource" : "R.mipmap.cpp_cat_layer",
+      "name" : "Python",
+      "questions" : {
+        "41" : "i=3;++i;",
+        "42" : "i=3;++i;",
+        "43" : "i=3;++i;",
+        "44" : "i=3;++i;",
+        "45" : "i=3;++i;"
+      }
+    }
+  },
+  "users" : {
+    "avivrrrrrr@gmail|com" : {
+      "permissions" : false,
+      "score" : 0
+    },
+    "nissan|goldberg3@gmail|com" : {
+      "permissions" : false,
+      "score" : 900
+    },
+    "nissan|goldberg@gmail|com" : {
+      "permissions" : true,
+      "score" : 0
+    },
+    "reutdvir3@gmail|com" : {
+      "permissions" : false,
+      "score" : 0
+    }
+  }
+}
