@@ -118,22 +118,38 @@ public class MainActivity extends AppCompatActivity {
                 //FIXME add to user table
                 //FIXME Check if in db if so startActivity right away
                 DatabaseReference dbRootRef_temp = mDatabase.getReference();
-                Map<String, Object> childUpdates = new HashMap<>();
-//                String email_str = mAuth.getCurrentUser().getEmail();
-                //generate hash for user
-//                String key = dbRootRef.child("users").push().getKey();
-//                String key2 = dbRootRef.child("users").get
+
+
                 String user_email = mAuth.getCurrentUser().getEmail().replace(".", "|");
 
+                //Check if user already exists
+                dbRootRef.child("users").addValueEventListener(new ValueEventListener() {
+                    String usr_email = mAuth.getCurrentUser().getEmail().replace(".", "|");
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot ds) {
+                        if(ds.child(usr_email).exists()){
+                            if(ds.child(usr_email).child("permissions").equals("true")){ //Exists user and is admin
+                                startActivity(new Intent(MainActivity.this, CategoriesActivity.class).putExtra("permissions","true"));
+                                finish();
+                            }else{ //There exists a user but isnt admin
+                                startActivity(new Intent(MainActivity.this, CategoriesActivity.class).putExtra("permissions","false"));
+                                finish();
+                            }
+                        }else{ //New user
+                            Map<String, Object> childUpdates = new HashMap<>();
+                            User user = new User(false,0);
+                            childUpdates.put("/users/"+usr_email+"/" , user);
+                            dbRootRef.updateChildren(childUpdates);
+                            startActivity(new Intent(MainActivity.this, CategoriesActivity.class).putExtra("permissions","false"));
+                        }
+                    }
 
-                User user = new User(false,0);
-                childUpdates.put("/users/"+user_email+"/" , user);
-                dbRootRef_temp.updateChildren(childUpdates);
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
 
-                System.out.println(mAuth.getCurrentUser().getEmail());
-                System.out.println(mAuth.getCurrentUser().getUid());
+                    }
+                });
 
-                startActivity(new Intent(MainActivity.this, CategoriesActivity.class).putExtra("permissions","false"));
                 return;
             }
             if (resultCode == Activity.RESULT_CANCELED) {
