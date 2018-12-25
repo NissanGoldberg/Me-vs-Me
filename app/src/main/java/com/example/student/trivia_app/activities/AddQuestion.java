@@ -112,8 +112,6 @@ public class AddQuestion extends AppCompatActivity {
             childUpdates.put("level", level_txt.getText().toString());
 
             db_question.updateChildren(childUpdates);
-            startActivity(new Intent(AddQuestion.this, CategoriesActivity.class));
-
         }
     }
 
