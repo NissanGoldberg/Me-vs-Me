@@ -1,8 +1,26 @@
 # Me-vs-Me
-Android Trivia App with User and Admin modes.
+An Android Trivia App with User and Admin modes. The questions are stord in Firebase. The App includes questions ordered by Subject.
+In user mode, one may answer questions and according to the difficulty of the question and the time it took to answer will be awarded points. 
+The player can also look at stastics which include:
+* the amount of questions answered 
+* percent of questions the playered in each subject
+* points awarded in each subject
+
+
+## User Mode
+In user mode, one may answer questions and according to the difficulty of the question and the time it took to answer will be awarded points. 
+The player can also look at stastics which include:
+* the amount of questions answered 
+* percent of questions the playered in each subject
+* points awarded in each subject
+<br>
+![Alt text](/gifs/user.gif?raw=true "User Screen")
 
 ## Admin Mode
 ![Alt text](/gifs/admin.gif?raw=true "Admin Screen")
 
-## User Mode
-![Alt text](/gifs/user.gif?raw=true "User Screen")
+In Admin mode, one may do the following:
+* Add new subject 
+* Add new question
+* Edit existing question
+
