@@ -17,10 +17,12 @@ The player can also look at stastics which include:
 ![Alt text](/gifs/user.gif?raw=true "User Screen")
 
 ## Admin Mode
-![Alt text](/gifs/admin.gif?raw=true "Admin Screen")
-
 In Admin mode, one may do the following:
 * Add new subject 
 * Add new question
 * Edit existing question
+
+![Alt text](/gifs/admin.gif?raw=true "Admin Screen")
+
+
 
