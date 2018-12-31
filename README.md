@@ -13,7 +13,7 @@ The player can also look at stastics which include:
 * the amount of questions answered 
 * percent of questions the playered in each subject
 * points awarded in each subject
-<br>
+
 ![Alt text](/gifs/user.gif?raw=true "User Screen")
 
 ## Admin Mode
