@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:id="@+id/toolbar">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minHeight="?attr/actionBarSize">
+        <ImageView
+            android:id="@+id/toolbar_img"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/c_logo"/>
+        <TextView
+            android:id="@+id/toolbar_name"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:text="     Welcome Nissan!       "
+            android:layout_marginTop="7dp"
+            android:textSize="16sp"/>
+        <TextView
+            android:id="@+id/toolbar_score"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:text="    720 pts"
+            android:layout_marginTop="7dp"
+            android:textColor="@android:color/holo_orange_dark"
+            android:textSize="16sp"/>
+    </LinearLayout>
+</android.support.v7.widget.Toolbar>

@@ -105,22 +105,10 @@ public class CategoriesActivity extends AppCompatActivity {
         });
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-    }
-
-//    private void populateImages() {
-//        images.put("CPP",R.drawable.cpp_logo);
-//        images.put("C",R.drawable.c_logo);
-//        images.put("Java",R.drawable.java_logo);
-//        images.put("Python",R.drawable.python_logo);
-//    }
 
     public boolean onCreateOptionsMenu(Menu menu){
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.main_menu, menu);
+//        MenuInflater inflater = getMenuInflater();
+//        inflater.inflate(R.menu.main_menu, menu);
         return true;
     }
 

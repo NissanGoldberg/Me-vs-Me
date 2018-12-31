@@ -122,7 +122,7 @@ public class QuestionsActivity extends AppCompatActivity {
                     if (permissions.equals("true")) {
 
                         String subjectName = dataSnapshot.getKey().toString();
-                        new_question_id[0] = subjectName + "1";
+                        new_question_id[0] = subjectName + "_1";
                         add_question_btn.setText("Add question");
                         add_question_btn.setOnClickListener(new View.OnClickListener() {
                             @Override
@@ -155,6 +155,29 @@ public class QuestionsActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu){
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.main_menu, menu);
+        TextView txt_name = findViewById(R.id.toolbar_name);
+        FirebaseDatabase mDatabase = FirebaseDatabase.getInstance();
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        txt_name.setText("      "+mAuth.getCurrentUser().getDisplayName()+"    ");
+        String usr_email = mAuth.getCurrentUser().getEmail().replace(".", "|");
+        if (permissions.equals("true")){
+            TextView txt_score = findViewById(R.id.toolbar_score);
+            txt_score.setText("Admin mode");
+        }else {
+            DatabaseReference dbRefScore = mDatabase.getReference("/users/" + usr_email + "/score");
+            dbRefScore.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    TextView txt_score = findViewById(R.id.toolbar_score);
+                    txt_score.setText(dataSnapshot.getValue().toString() + " pts");
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
+        }
         return true;
     }
 

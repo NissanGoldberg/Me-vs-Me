@@ -5,6 +5,7 @@ import com.example.student.trivia_app.model.User;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
@@ -48,6 +49,8 @@ public class GameActivity extends AppCompatActivity {
     FirebaseAuth mAuth;
     final int[] level = new int[1];
     float value[] = new float[1];
+    MediaPlayer game_music;
+//    final MediaPlayer[] countdown_music = new MediaPlayer[1];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +63,9 @@ public class GameActivity extends AppCompatActivity {
         id[0] = intent.getStringExtra("question_id");
         final TextView progressbar_txt = findViewById(R.id.progressBar_txt);
         progressbar_txt.setText("20 secs");
-
+//        countdown_music[0] =  MediaPlayer.create(GameActivity.this,R.raw.sec_countdown);
+        game_music = MediaPlayer.create(GameActivity.this,R.raw.game_music2);
+        game_music.start();
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
         user_email = mAuth.getCurrentUser().getEmail().replace(".", "|");
 
@@ -118,6 +123,10 @@ public class GameActivity extends AppCompatActivity {
                 value[0] = from +(to -from )*interpolatedTime;
                 progressBar.setProgress((int)value[0]);
                 progressBar_txt.setText(String.format("%.1f seconds", (100-value[0])/3.33));
+                //add countdown
+//                if ( value[0]==62.00){
+//                    countdown_music[0].start();
+//                }
             }
         };
         anim.setInterpolator(new LinearInterpolator()); // do not alter animation rate
@@ -132,7 +141,38 @@ public class GameActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu){
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.main_menu, menu);
+        TextView txt_name = findViewById(R.id.toolbar_name);
+        FirebaseDatabase mDatabase = FirebaseDatabase.getInstance();
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        txt_name.setText("      "+mAuth.getCurrentUser().getDisplayName()+"    ");
+        String usr_email = mAuth.getCurrentUser().getEmail().replace(".", "|");
+        DatabaseReference dbRefScore = mDatabase.getReference("/users/" + usr_email+"/score");
+        dbRefScore.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                TextView txt_score  = findViewById(R.id.toolbar_score);
+                txt_score.setText(dataSnapshot.getValue().toString() + " pts");
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
         return true;
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if (game_music.isPlaying()) {
+            game_music.stop();    // stops the object from playing
+            game_music.release(); // always a good practice to release the resource when done
+        }
+//        }if (countdown_music[0].isPlaying()) {
+//            countdown_music[0].stop();    // stops the object from playing
+//            countdown_music[0].release(); // always a good practice to release the resource when done
+//        }
     }
 
     public boolean onOptionsItemSelected(MenuItem item){
